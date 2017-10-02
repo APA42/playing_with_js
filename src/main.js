@@ -1,5 +1,7 @@
+"use strict";
 
 
+var playWithListBtn = document.getElementById("playing-with-list-btn");
 
 function playingWithList() {
 
@@ -15,3 +17,5 @@ function playingWithList() {
     }
 }
 
+
+playWithListBtn.addEventListener('click', playingWithList);
