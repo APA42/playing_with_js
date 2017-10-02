@@ -15,7 +15,20 @@ function playingWithList() {
     for (var counter=0; counter < myList.length; counter++) {
         console.log(myList[counter]);
     }
+
+    // Display
+    displayContentList(myList);
 }
 
 
 playWithListBtn.addEventListener('click', playingWithList);
+
+
+function displayContentList(aList) {
+    var listToDisplay = document.querySelector('.list-elements');
+    var elements = "";
+    for (var counter=0; counter < aList.length; counter++) {
+        elements +="<li>" + aList[counter] + "</li>";
+    }
+    listToDisplay.innerHTML = elements;
+}
