@@ -1,12 +1,11 @@
 "use strict";
 
-
 var playWithListBtn = document.getElementById("playing-with-list-btn");
+var removeSomeElementsFromListBtn = document.getElementById("remove-some-elements-list-btn");
+var myList = [];
 
 function playingWithList() {
 
-    //Make a list
-    var myList = [];
     myList.push('first_element');
     myList.push('second_element');
     myList.push('third_element', 'fourth_element');
@@ -16,13 +15,19 @@ function playingWithList() {
         console.log(myList[counter]);
     }
 
-    // Display
+    displayContentList(myList);
+}
+
+function removeSomeElementsFromList() {
+    // remove second_element
+    myList.splice(1,1);
+
     displayContentList(myList);
 }
 
 
 playWithListBtn.addEventListener('click', playingWithList);
-
+removeSomeElementsFromListBtn.addEventListener('click', removeSomeElementsFromList);
 
 function displayContentList(aList) {
     var listToDisplay = document.querySelector('.list-elements');
